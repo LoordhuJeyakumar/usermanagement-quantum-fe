@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: rgb(0, 245, 225);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 245, 225, 1) 0%,
+    rgba(0, 118, 131, 1) 79%
+  );
+
+  height: 100vh;
+}
+
+.register-card {
+  position: relative;
+}
+
+.register-card::after {
+  content: "";
+  position: absolute;
+
+  top: 110%; /* Place the shadow below the card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Slightly smaller than the card width */
+  height: 20px; /* Height of the shadow */
+  background: rgba(0, 0, 0, 0.4); /* Shadow color */
+  filter: blur(15px); /* Smooth blur effect */
+  z-index: -1; /* Place the shadow behind the card */
+  border-radius: 50%; /* Rounded shadow effect */
+}
